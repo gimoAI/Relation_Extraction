@@ -15,7 +15,7 @@ import warnings
 
 
 class Dataset_processor():
-    def __init__(self, data_path, 
+    def __init__(self, data_path,
                  entity_separator=" [SEP] ",
                  text_separator=" [TXTSEP] ",
                  mode = "NER_fixed",
@@ -26,7 +26,8 @@ class Dataset_processor():
          entity_separator - str is a special token for separating a pair of entities.
          map_dict - dict - dictionary-map with correlation of classes and indices (key - class name, value - index)
          """ 
-        assert mode in ['NER_fixed', 'Joint']
+        #assert mode in ['NER_fixed', 'Joint']
+        mode = 'NER_fixed'
         self.data_path = data_path
         self.raw_data = self.load_data(data_path)
         if mode=="Joint":
@@ -102,7 +103,7 @@ class Dataset_processor():
             res_rel_df = res_rel_df.append(cur_rel_df)
         
         if verbose:
-            print("The number of relations in the dataframe: ", rel_nb)
+            print("Число связей в dataframe: ", rel_nb)
         return res_rel_df
     
 
@@ -317,8 +318,8 @@ if __name__=="__main__":
         mode = args.mode
         
     else:
-        data_path = "../data/dev_DDI/tr.json"
-        res_path = "../data/dev_DDI/tr.tsv"
+        data_path = r"C:\Users\gijsm\Desktop\MyDre\Usual Care\RUS\usual_care_prepped.json"
+        res_path = r"C:\Users\gijsm\Desktop\MyDre\Usual Care\RUS\rus_output.tsv"
         entity_separator = " [SEP] "
         text_separator = " [TXTSEP] "
         label_map_path = None

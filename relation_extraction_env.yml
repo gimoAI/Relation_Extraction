@@ -189,3 +189,4 @@ dependencies:
     - wrapt==1.12.1
     - xxhash==2.0.2
     - zipp==3.5.0
+prefix: /s/ls4/users/ivan_rus/anaconda3_2021/envs/relation_extraction

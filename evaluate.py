@@ -85,7 +85,7 @@ if __name__=="__main__":
         print()
     print()
     
-    print("examples of wrongly predicted texts: ")
+    print("примеры неправильно предсказанных текстов: ")
     for cur_row_nb, cur_row in incorrect_examples.iterrows():
         print("Text №{}".format(cur_row_nb))
         print(cur_row.text)
